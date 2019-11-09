@@ -91,7 +91,7 @@
     }
 
     .messages{
-      height: calc(100vh - 330px);
+      height: calc(100vh - 287px);
       padding: 46px 40px;
       background-color: #fafafa;
       overflow: scroll;
@@ -121,7 +121,6 @@
       }
 
     .form{
-      height: 90px;
       padding: 20px 40px;
       background-color: #ddd;
       .new-message{
@@ -130,14 +129,12 @@
           position: relative;
           width: 100%;
           &__text{
-            height: 50px;
-            width: 100%;
-            padding: 0 40px 0 10px;
             color: #434a54;
             border-style: none;
           input{
             height: 50px;
-            width: 100%;
+            width: 90%;
+            padding: 0 0 0 10px;
           }
           }
 
@@ -145,7 +142,7 @@
             font-size: 1.3rem;
             position: absolute;
             top: 10px;
-            right: 10px;
+            right: 30px;
             cursor: pointer;
             i.fa.fa-image{
               display: inline-block;
