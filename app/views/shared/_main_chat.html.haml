@@ -2,32 +2,27 @@
   .main-header
     .main-header__left-box
       .main-header__left-box__current-group
-        猿軍団
-      .main-header__left-box__member-list
-        Member : 
-        .main-header__left-box__member-list__member
-          猿
+        = @group.name
+        .main-header__left-box__lists
+          .main-header__left-box__lists__member-list
+            Member : 
+          - @group.users.each do |user|
+            .main-header__left-box__lists__member-list__member
+              = user.name
     .main-header__edit-btn
-      Edit
+      = link_to edit_group_path(@group) do
+        Edit
   .messages
-    .message
-      .message__upper-info
-        .message__upper-info__talker
-          猿
-        .message__upper-info__date
-          2019/11/07(thu)21:30:44
-      .message__text
-        aaaaa
+    = render partial: 'shared/message', collection: @messages
   .form
-    .new-message
-      .input-box
-        %label.input-box__text
-          %input{placeholder: "type a message"}
-        %label.input-box__image
-          %i.fa.fa-image
-          %input{type: "file"}
-      %label.submit-btn
-        %input{type: "submit"}
-          Send
-          
+    .new-messages
+      = form_for [@group, @message] do |f|
+        .input-box
+          = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+          = f.label :image, class: 'input-box__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'submit-btn'
+
+        
     
