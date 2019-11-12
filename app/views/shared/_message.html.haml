@@ -1,0 +1,8 @@
+.message
+  .message__upper-info
+    .message__upper-info__talker
+      = current_user.name
+    .message__upper-info__date
+      = message.created_at
+  .message__text
+    = message.content

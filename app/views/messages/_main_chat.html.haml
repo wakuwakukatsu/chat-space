@@ -1,0 +1,32 @@
+.chat-main
+  .main-header
+    .main-header__left-box
+      .main-header__left-box__current-group
+        猿軍団
+      .main-header__left-box__member-list
+        .main-header__left-box__member-list__member
+          Member :猿
+    .main-header__edit-btn
+      Edit
+  .messages
+    .message
+      .message__upper-info
+        .message__upper-info__talker
+          猿
+        .message__upper-info__date
+          2019/11/07(thu)21:30:44
+      .message__text
+        aaaaa
+  .form
+    .new-message
+      .input-box
+        %label.input-box__text
+          %input{placeholder: "type a message"}
+        %label.input-box__image
+          %i.fa.fa-image
+          %input{type: "file"}
+      %label.submit-btn
+        %input{type: "submit"}
+          Send
+          
+    
