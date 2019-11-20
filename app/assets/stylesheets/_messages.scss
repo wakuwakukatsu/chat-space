@@ -27,6 +27,7 @@
         }
         &__menu{
           display: flex;
+          a:visited { color:white;}
           &__new-group{
             margin-left: 0.3rem;
           }
@@ -49,9 +50,11 @@
         &__group-name{
           font-size: 15px;
           margin-bottom: 5px;
+          color: white;
         }
         &__latest-message{
           font-size: 11px;
+          color: white;
         }
       }
   .chat-main{
@@ -93,6 +96,7 @@
         position: absolute;
         right: 40px;
         color: #38aef0;
+        
       }
     }
 
